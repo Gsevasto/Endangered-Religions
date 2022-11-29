@@ -1,0 +1,8 @@
+.grid line {
+  stroke-opacity: 0.1;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width: 0;
+}
