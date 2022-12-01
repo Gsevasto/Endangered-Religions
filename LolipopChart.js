@@ -140,7 +140,7 @@ Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
         //.attr("d", data)
         .on("mouseover", function(event, d){
-            
+             
                         tt_mouseover(d); 
 			       })
        .on("mouseout", function(d) {
@@ -185,8 +185,8 @@ Hide tooltip on mouseout
         tooltip.html(
             d.name +
             '<br>' +                          
-            'Estimated Start : '+ d.found+ '<br>'+
-            'End Date : ' +d.end+ '<br>'+
+            'Estimated Start : '+ date_converter(d.found)+ '<br>'+
+            'End Date : ' +date_converter(d.end)+ '<br>'+
             'Region Founded : '  + d.origin+ '<br>'+ 
             'Religion Type : '  + d.type)        
         .style("left", (event.pageX) + "px")
@@ -198,6 +198,14 @@ Hide tooltip on mouseout
         .style("opacity", 0)
         //.style("left", (d3.event.pageX + 10) + "px")
         //.style("top", (d3.event.pageY - 28) + "px");
+    }
+
+    function date_converter(num) {
+        if (num < 0) {
+            return (0 - num) + "BC";
+        } else {
+            return num + "AD";
+        }
     }
 
 // Function That converts csv data into usable data, also formated like it was on the given scatterplotV2020.js file
