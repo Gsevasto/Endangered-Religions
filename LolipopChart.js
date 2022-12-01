@@ -93,28 +93,13 @@ Mouseover and mouseout events for tooltips
         //.attr("d", data)
         .on("mouseover", function(event, d){
             
-                        tooltip.transition()		
-                        .duration(200)	
-                        .style("opacity", .9);		
-                        tooltip.html(
-                           d.name +
-                         '<br>' +                          
-                         'Estimated Start : '+ d.found+ '<br>'+
-                         'End Date : ' +d.end+ '<br>'+
-                         'Region Founded : '  + d.origin+ '<br>'+ 
-                        'Religion Type : '  + d.type)        
-                        .style("left", (event.pageX) + "px")
-                        .style("top", (event.pageY - 28) + "px");  
+                        tt_mouseover(d);  
 			       })
        .on("mouseout", function(d) {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Hide tooltip on mouseout
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
-                        tooltip.transition()		
-                        .duration(500)		
-                        .style("opacity", 0)
-                        //.style("left", (d3.event.pageX + 10) + "px")
-                        //.style("top", (d3.event.pageY - 28) + "px");
+                        tt_mouseout(d);
 			       })
     
     // Circles of variable 1
@@ -132,28 +117,13 @@ Mouseover and mouseout events for tooltips
         //.attr("d", data)
         .on("mouseover", function(event, d){
             
-                        tooltip.transition()		
-                        .duration(200)	
-                        .style("opacity", .9);		
-                        tooltip.html(
-                           d.name +
-                         '<br>' +                          
-                         'Estimated Start : '+ d.found+ '<br>'+
-                         'End Date : ' +d.end+ '<br>'+
-                         'Region Founded : '  + d.origin+ '<br>'+ 
-                        'Religion Type : '  + d.type)         
-                        .style("left", (event.pageX) + "px")
-                        .style("top", (event.pageY - 28) + "px");  
+                        tt_mouseover(d); 
 			       })
        .on("mouseout", function(d) {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Hide tooltip on mouseout
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
-                        tooltip.transition()		
-                        .duration(500)		
-                        .style("opacity", 0)
-                        //.style("left", (d3.event.pageX + 10) + "px")
-                        //.style("top", (d3.event.pageY - 28) + "px");
+                        tt_mouseout(d);
 			       })
 
     // Circles of variable 2
@@ -171,28 +141,13 @@ Mouseover and mouseout events for tooltips
         //.attr("d", data)
         .on("mouseover", function(event, d){
             
-                        tooltip.transition()		
-                        .duration(200)	
-                        .style("opacity", .9);		
-                        tooltip.html(
-                           d.name +
-                         '<br>' +                          
-                         'Estimated Start : '+ d.found+ '<br>'+
-                         'End Date : ' +d.end+ '<br>'+
-                         'Region Founded : '  + d.origin+ '<br>'+ 
-                        'Religion Type : '  + d.type)        
-                        .style("left", (event.pageX) + "px")
-                        .style("top", (event.pageY - 28) + "px");  
+                        tt_mouseover(d); 
 			       })
        .on("mouseout", function(d) {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Hide tooltip on mouseout
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
-                        tooltip.transition()		
-                        .duration(500)		
-                        .style("opacity", 0)
-                        //.style("left", (d3.event.pageX + 10) + "px")
-                        //.style("top", (d3.event.pageY - 28) + "px");
+                        tt_mouseout(d);
 			       })
     
 });
@@ -221,6 +176,30 @@ Hide tooltip on mouseout
     function make_y_gridlines(y) {		
         return d3.axisLeft(y);
     }
+
+    // tooltip functions
+    function tt_mouseover(d) {
+        tooltip.transition()		
+        .duration(200)	
+        .style("opacity", .9);		
+        tooltip.html(
+            d.name +
+            '<br>' +                          
+            'Estimated Start : '+ d.found+ '<br>'+
+            'End Date : ' +d.end+ '<br>'+
+            'Region Founded : '  + d.origin+ '<br>'+ 
+            'Religion Type : '  + d.type)        
+        .style("left", (event.pageX) + "px")
+        .style("top", (event.pageY - 28) + "px");
+    }
+    function tt_mouseout(d) {
+        tooltip.transition()		
+        .duration(500)		
+        .style("opacity", 0)
+        //.style("left", (d3.event.pageX + 10) + "px")
+        //.style("top", (d3.event.pageY - 28) + "px");
+    }
+
 // Function That converts csv data into usable data, also formated like it was on the given scatterplotV2020.js file
 /*function type(d, _, columns) {  
     for (var i = 1, n = columns.length, c; i < n; ++i) d[c = columns[i]] = +d[c];
