@@ -16,6 +16,12 @@
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+//Create the tooltip
+var tooltip = d3.select("body").append("div")
+.attr("class", "tooltip")
+.style("opacity", 0)
+.classed("hidden", true);
+
 //=========================================================================================================================================//
 //  INITIAL GRAPHIC    
 //=========================================================================================================================================//
@@ -25,6 +31,13 @@ d3.csv("CulturesListV6.csv", conversor).then( function(data) {
     
     // Log checking
     console.log(data); // Check data parsed correctly
+    
+   /* var scatterdataset= 
+                data.map(function (d) {
+                    return { name:d.name, found: d.found, origin: d.origin, end: d.end, type:d.type};
+                });*/
+
+    //data=scatterdataset;
     
     // Define X axis
     var x  = d3.scaleLinear()
@@ -74,6 +87,35 @@ d3.csv("CulturesListV6.csv", conversor).then( function(data) {
             .attr("y2", function(d) { return y(d.name); })
             .attr("stroke", "steelblue")
             .attr("stroke-width", "2px")
+    /*------------------------------------------------------------------------------------------------------------------------------------------------------
+Mouseover and mouseout events for tooltips
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+        //.attr("d", data)
+        .on("mouseover", function(event, d){
+            
+                        tooltip.transition()		
+                        .duration(200)	
+                        .style("opacity", .9);		
+                        tooltip.html(
+                           d.name +
+                         '<br>' +                          
+                         'Estimated Start : '+ d.found+ '<br>'+
+                         'End Date : ' +d.end+ '<br>'+
+                         'Region Founded : '  + d.origin+ '<br>'+ 
+                        'Religion Type : '  + d.type)        
+                        .style("left", (event.pageX) + "px")
+                        .style("top", (event.pageY - 28) + "px");  
+			       })
+       .on("mouseout", function(d) {
+/*------------------------------------------------------------------------------------------------------------------------------------------------------
+Hide tooltip on mouseout
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+                        tooltip.transition()		
+                        .duration(500)		
+                        .style("opacity", 0)
+                        //.style("left", (d3.event.pageX + 10) + "px")
+                        //.style("top", (d3.event.pageY - 28) + "px");
+			       })
     
     // Circles of variable 1
     svg.selectAll("mycircle")
@@ -84,6 +126,35 @@ d3.csv("CulturesListV6.csv", conversor).then( function(data) {
             .attr("cy", function(d) { return y(d.name); })
             .attr("r", "6")
             .style("fill", "#69b3a2")
+        /*------------------------------------------------------------------------------------------------------------------------------------------------------
+Mouseover and mouseout events for tooltips
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+        //.attr("d", data)
+        .on("mouseover", function(event, d){
+            
+                        tooltip.transition()		
+                        .duration(200)	
+                        .style("opacity", .9);		
+                        tooltip.html(
+                           d.name +
+                         '<br>' +                          
+                         'Estimated Start : '+ d.found+ '<br>'+
+                         'End Date : ' +d.end+ '<br>'+
+                         'Region Founded : '  + d.origin+ '<br>'+ 
+                        'Religion Type : '  + d.type)         
+                        .style("left", (event.pageX) + "px")
+                        .style("top", (event.pageY - 28) + "px");  
+			       })
+       .on("mouseout", function(d) {
+/*------------------------------------------------------------------------------------------------------------------------------------------------------
+Hide tooltip on mouseout
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+                        tooltip.transition()		
+                        .duration(500)		
+                        .style("opacity", 0)
+                        //.style("left", (d3.event.pageX + 10) + "px")
+                        //.style("top", (d3.event.pageY - 28) + "px");
+			       })
 
     // Circles of variable 2
     svg.selectAll("mycircle")
@@ -94,6 +165,35 @@ d3.csv("CulturesListV6.csv", conversor).then( function(data) {
             .attr("cy", function(d) { return y(d.name); })
             .attr("r", "6")
             .style("fill", "#4C4082")
+        /*------------------------------------------------------------------------------------------------------------------------------------------------------
+Mouseover and mouseout events for tooltips
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+        //.attr("d", data)
+        .on("mouseover", function(event, d){
+            
+                        tooltip.transition()		
+                        .duration(200)	
+                        .style("opacity", .9);		
+                        tooltip.html(
+                           d.name +
+                         '<br>' +                          
+                         'Estimated Start : '+ d.found+ '<br>'+
+                         'End Date : ' +d.end+ '<br>'+
+                         'Region Founded : '  + d.origin+ '<br>'+ 
+                        'Religion Type : '  + d.type)        
+                        .style("left", (event.pageX) + "px")
+                        .style("top", (event.pageY - 28) + "px");  
+			       })
+       .on("mouseout", function(d) {
+/*------------------------------------------------------------------------------------------------------------------------------------------------------
+Hide tooltip on mouseout
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+                        tooltip.transition()		
+                        .duration(500)		
+                        .style("opacity", 0)
+                        //.style("left", (d3.event.pageX + 10) + "px")
+                        //.style("top", (d3.event.pageY - 28) + "px");
+			       })
     
 });
 
@@ -121,3 +221,8 @@ d3.csv("CulturesListV6.csv", conversor).then( function(data) {
     function make_y_gridlines(y) {		
         return d3.axisLeft(y);
     }
+// Function That converts csv data into usable data, also formated like it was on the given scatterplotV2020.js file
+/*function type(d, _, columns) {  
+    for (var i = 1, n = columns.length, c; i < n; ++i) d[c = columns[i]] = +d[c];
+    return d;
+}*/
