@@ -19,3 +19,94 @@ div.tooltip {
   border-radius: 8px;
   pointer-events: none;
 }
+
+.PolytheisticEnd {
+    fill: #bd2b4b;
+}
+
+.PolytheisticFound {
+    fill: #ff5349;
+}
+
+.PolytheisticLine {
+    stroke: #e3534c;
+    shape-rendering: crispEdges;
+}
+
+.MonotheisticFound {
+    fill: #69b3a2;
+}
+
+.MonotheisticEnd {
+    fill: #4c4082;
+}
+
+.MonotheisticLine {
+    stroke: steelblue;
+    shape-rendering: crispEdges;
+}
+
+.AnimismEnd {
+    fill: #541675;
+}
+
+.AnimismFound {
+    fill: #b491c8;
+}
+
+.AnimismLine {
+    stroke: #9c3587;
+    shape-rendering: crispEdges;
+}
+
+.DualisticEnd {
+    fill: #64731e;
+}
+
+.DualisticFound {
+    fill: #dfe667;
+}
+
+.DualisticLine {
+    stroke: #7ea310;
+    shape-rendering: crispEdges;
+}
+
+.NontheisticEnd {
+    fill: #535c5f;
+}
+
+.NontheisticFound {
+    fill: #73939c;
+}
+
+.NontheisticLine {
+    stroke: #8a8a8a;
+    shape-rendering: crispEdges;
+}
+
+.ShamanisticEnd {
+    fill: #535c5f;
+}
+
+.ShamanisticFound {
+    fill: #73939c;
+}
+
+.ShamanisticLine {
+    stroke: #8a8a8a;
+    shape-rendering: crispEdges;
+}
+
+.PantheismEnd {
+    fill: #fd5602;
+}
+
+.PantheismFound {
+    fill: #ffaf42;
+}
+
+.PantheismLine {
+    stroke: #e38931;
+    shape-rendering: crispEdges;
+}
