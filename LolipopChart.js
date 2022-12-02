@@ -63,6 +63,7 @@ d3.csv("CulturesListV6.csv", conversor).then( function(data) {
         .attr("transform", "translate(" + 0 + "," + (height) + ")")
         .call(make_x_gridlines(x)
               .tickSize(-height)
+              .tickPadding(15)
               .tickFormat(function (d) {
                     return date_converter(d);
                 })
@@ -187,7 +188,7 @@ Hide tooltip on mouseout
         tooltip.html(
             d.name +
             '<br>' +                          
-            'Estimated Start : '+ date_converter(d.found)+ '<br>'+
+            'Start Date: '+ date_converter(d.found)+ '<br>'+
             'End Date : ' +date_converter(d.end)+ '<br>'+
             'Region Founded : '  + d.origin+ '<br>'+ 
             'Religion Type : '  + d.type)        
@@ -202,11 +203,15 @@ Hide tooltip on mouseout
         //.style("top", (d3.event.pageY - 28) + "px");
     }
 
+    // date conversion function
     function date_converter(num) {
         if (num < 0) {
-            return (0 - num) + "BC";
-        } else {
-            return num + "AD";
+            return (0 - num) + " BC";
+        } else if (num == 0) {
+            return 0;
+        }
+        else {
+            return num + " AD";
         }
     }
 
