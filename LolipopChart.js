@@ -89,13 +89,12 @@ d3.csv("CulturesListV7.csv", conversor).then( function(data) {
             .attr("y1", function(d) { return y(d.name); })
             .attr("y2", function(d) { return y(d.name); })
             .attr("stroke", "steelblue")
-            //.attr("stroke-width", "2px")
+            .attr("stroke-width", "4px") // Controls Width
     /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
         //.attr("d", data)
         .on("mouseover", function(event, d){
-            
                         tt_mouseover(d);  
 			       })
        .on("mouseout", function(d) {
@@ -109,10 +108,10 @@ Hide tooltip on mouseout
     svg.selectAll("mycircle")
         .data(data)
         .join("circle")
-            .attr("class", function(d) { return d.type+"End"; })
+            .attr("class", function(d) { return d.type+"Found"; })
             .attr("cx", function(d) { return x(d.found); })
             .attr("cy", function(d) { return y(d.name); })
-            .attr("r", "6")
+            .attr("r", "6") // Controls Radius
             //.style("fill", "#69b3a2")
         /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Mouseover and mouseout events for tooltips
@@ -136,8 +135,8 @@ Hide tooltip on mouseout
             .attr("class", function(d) { return d.type+"End"; })
             .attr("cx", function(d) { return x(d.end); })
             .attr("cy", function(d) { return y(d.name); })
-            .attr("r", "6")
-            .style("fill", "#4C4082")
+            .attr("r", "6") // Controls Radius
+            //.style("fill", "#4C4082")
         /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
