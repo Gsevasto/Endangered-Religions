@@ -219,7 +219,7 @@ Hide tooltip on mouseout
         } else if (num == 0) {
             return 0;
         } else if (num == 2022) {
-            return "currently practiced"
+            return "Currently Practiced"
         } else {
             return num + " AD";
         }
