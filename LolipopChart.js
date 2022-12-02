@@ -83,13 +83,13 @@ d3.csv("CulturesListV6.csv", conversor).then( function(data) {
     svg.selectAll("myline")
         .data(data)
         .join("line")
-            //.attr("class", function(d) { return d.type; })
+            .attr("class", function(d) { return d.type+"Line"; })
             .attr("x1", function(d) { return x(d.found); })
             .attr("x2", function(d) { return x(d.end); })
             .attr("y1", function(d) { return y(d.name); })
             .attr("y2", function(d) { return y(d.name); })
             .attr("stroke", "steelblue")
-            .attr("stroke-width", "2px")
+            //.attr("stroke-width", "2px")
     /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -109,11 +109,11 @@ Hide tooltip on mouseout
     svg.selectAll("mycircle")
         .data(data)
         .join("circle")
-            //.attr("class", function(d) { return d.type; })
+            .attr("class", function(d) { return d.type+"End"; })
             .attr("cx", function(d) { return x(d.found); })
             .attr("cy", function(d) { return y(d.name); })
             .attr("r", "6")
-            .style("fill", "#69b3a2")
+            //.style("fill", "#69b3a2")
         /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -133,7 +133,7 @@ Hide tooltip on mouseout
     svg.selectAll("mycircle")
         .data(data)
         .join("circle")
-            //.attr("class", function(d) { return d.type; })
+            .attr("class", function(d) { return d.type+"End"; })
             .attr("cx", function(d) { return x(d.end); })
             .attr("cy", function(d) { return y(d.name); })
             .attr("r", "6")
