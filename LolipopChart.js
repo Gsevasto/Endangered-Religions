@@ -45,7 +45,7 @@ d3.csv("CulturesListV6.csv", conversor).then( function(data) {
         .range([0, width])
     svg.append("g") // Appends a shape group to the pointed body
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x));
+        .call(d3.axisBottom(x).tickFormat(""));
     
     // Define Y Axis
     var y = d3.scaleBand()
@@ -63,7 +63,9 @@ d3.csv("CulturesListV6.csv", conversor).then( function(data) {
         .attr("transform", "translate(" + 0 + "," + (height) + ")")
         .call(make_x_gridlines(x)
               .tickSize(-height)
-              .tickFormat("")
+              .tickFormat(function (d) {
+                    return date_converter(d);
+                })
         )
     
     // add the Y gridlines to graph
