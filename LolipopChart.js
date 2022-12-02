@@ -189,7 +189,7 @@ Hide tooltip on mouseout
             d.name +
             '<br>' +                          
             'Start Date: '+ date_converter(d.found)+ '<br>'+
-            'End Date : ' +date_converter(d.end)+ '<br>'+
+            'End Date : ' +tt_dateender(d.end)+ '<br>'+
             'Region Founded : '  + d.origin+ '<br>'+ 
             'Religion Type : '  + d.type)        
         .style("left", (event.pageX) + "px")
@@ -209,8 +209,18 @@ Hide tooltip on mouseout
             return (0 - num) + " BC";
         } else if (num == 0) {
             return 0;
+        } else {
+            return num + " AD";
         }
-        else {
+    }
+    function tt_dateender(num) {
+        if (num < 0) {
+            return (0 - num) + " BC";
+        } else if (num == 0) {
+            return 0;
+        } else if (num == 2022) {
+            return "currently practiced"
+        } else {
             return num + " AD";
         }
     }
