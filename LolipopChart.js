@@ -168,12 +168,39 @@ Legend
     svg.append("text")
         .text("Legend")
         .attr("class", "label")
-        .attr("x", 1450)
+        .attr("x", 1515)
         .attr("y", 520)
         .attr("fill", "black")
         .style("text-anchor", "left")
+        .attr("font-size", "21px");
+    svg.append("rect")
+        .attr("x", 1465)
+        .attr("y", 530)
+        .attr("height", 20)
+        .attr("width", 20)
+        .attr("fill", "#9c3587");
+    svg.append("text")
+        .text("Animism")
+        .attr("class", "label")
+        .attr("x", 1500)
+        .attr("y", 545)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
         .attr("font-size", "17px");
-    
+    svg.append("rect")
+        .attr("x", 1465)
+        .attr("y", 550)
+        .attr("height", 20)
+        .attr("width", 20)
+        .attr("fill", "#7ea310");
+    svg.append("text")
+        .text("Dualism")
+        .attr("class", "label")
+        .attr("x", 1500)
+        .attr("y", 565)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
 });
 
 //=========================================================================================================================================//
