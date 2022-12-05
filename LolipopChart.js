@@ -159,6 +159,7 @@ Hide tooltip on mouseout
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Legend
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    // legend box
     svg.append("rect")
         .attr("x", 1450)
         .attr("y", 500)
@@ -173,6 +174,7 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "21px");
+    // animism
     svg.append("rect")
         .attr("x", 1465)
         .attr("y", 530)
@@ -187,6 +189,7 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
+    // dualism
     svg.append("rect")
         .attr("x", 1465)
         .attr("y", 550)
@@ -201,6 +204,83 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
+    // monotheism
+    svg.append("rect")
+        .attr("x", 1465)
+        .attr("y", 570)
+        .attr("height", 20)
+        .attr("width", 20)
+        .attr("fill", "steelblue");
+    svg.append("text")
+        .text("Monotheism")
+        .attr("class", "label")
+        .attr("x", 1500)
+        .attr("y", 585)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
+    // nontheistic
+    svg.append("rect")
+        .attr("x", 1465)
+        .attr("y", 590)
+        .attr("height", 20)
+        .attr("width", 20)
+        .attr("fill", "#8a8a8a");
+    svg.append("text")
+        .text("Nontheistic")
+        .attr("class", "label")
+        .attr("x", 1500)
+        .attr("y", 605)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
+    // pantheism
+    svg.append("rect")
+        .attr("x", 1465)
+        .attr("y", 610)
+        .attr("height", 20)
+        .attr("width", 20)
+        .attr("fill", "#e38931");
+    svg.append("text")
+        .text("Pantheism")
+        .attr("class", "label")
+        .attr("x", 1500)
+        .attr("y", 625)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
+    // polytheism
+    svg.append("rect")
+        .attr("x", 1465)
+        .attr("y", 630)
+        .attr("height", 20)
+        .attr("width", 20)
+        .attr("fill", "#e3534c");
+    svg.append("text")
+        .text("Polytheism")
+        .attr("class", "label")
+        .attr("x", 1500)
+        .attr("y", 645)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
+    // shamanism
+    svg.append("rect")
+        .attr("x", 1465)
+        .attr("y", 650)
+        .attr("height", 20)
+        .attr("width", 20)
+        .attr("fill", "#8a8a8a");
+    svg.append("text")
+        .text("Shamanism")
+        .attr("class", "label")
+        .attr("x", 1500)
+        .attr("y", 665)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
+    
+    
 });
 
 //=========================================================================================================================================//
