@@ -95,13 +95,15 @@ Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
         //.attr("d", data)
         .on("mouseover", function(event, d){
-                        tt_mouseover(d);  
+                        tt_mouseover(d);
+                        hover_line(d);
 			       })
        .on("mouseout", function(d) {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Hide tooltip on mouseout
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
                         tt_mouseout(d);
+                        hover_line_out(d);
 			       })
     
     // Circles of variable 1
@@ -222,6 +224,14 @@ Hide tooltip on mouseout
         } else {
             return num + " AD";
         }
+    }
+    function hover_line(d){
+        svg.selectAll("line")
+            .attr("stroke-width", "8px");
+    }
+    function hover_line_out(d){
+        svg.selectAll("line")
+            .attr("stroke-width", "4px");
     }
 
 // Function That converts csv data into usable data, also formated like it was on the given scatterplotV2020.js file
