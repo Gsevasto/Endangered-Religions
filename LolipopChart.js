@@ -27,7 +27,7 @@ var tooltip = d3.select("body").append("div")
 //=========================================================================================================================================//
 
 //Data is parsed and sent back as an data array
-d3.csv("CulturesListV7.csv", conversor).then( function(data) {
+d3.csv("CulturesListV8.csv", conversor).then( function(data) {
     
     // Log checking
     console.log(data); // Check data parsed correctly
