@@ -245,6 +245,9 @@ Legend
             return num + " AD";
         }
     }
+
+    
+    // hover functions
     //changes line thickness when you hover over a line
     function hover_line(d){
         svg.selectAll("line")
