@@ -120,14 +120,15 @@ Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
         //.attr("d", data)
         .on("mouseover", function(event, d){
-            
-                        tt_mouseover(d); 
+                        tt_mouseover(d);
+                        circle_hover(d);
 			       })
        .on("mouseout", function(d) {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Hide tooltip on mouseout
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
                         tt_mouseout(d);
+                        circle_hover_out(d);
 			       })
 
     // Circles of variable 2
@@ -144,14 +145,15 @@ Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
         //.attr("d", data)
         .on("mouseover", function(event, d){
-             
                         tt_mouseover(d); 
+                        circle_hover(d);
 			       })
        .on("mouseout", function(d) {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Hide tooltip on mouseout
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
                         tt_mouseout(d);
+                        circle_hover_out(d);
 			       })
     
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -242,6 +244,14 @@ Legend
     function hover_line_out(d){
         svg.selectAll("line")
             .attr("stroke-width", "4px");
+    }
+    function circle_hover(d){
+        svg.selectAll("circle")
+            .attr("r", "10")
+    }
+    function circle_hover_out(d){
+        svg.selectAll("circle")
+            .attr("r", "6")
     }
 
 // Function That converts csv data into usable data, also formated like it was on the given scatterplotV2020.js file
