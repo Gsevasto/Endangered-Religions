@@ -245,6 +245,8 @@ Legend
             return num + " AD";
         }
     }
+
+    // hover functions
     function hover_line(d){
         svg.selectAll("line")
             .attr("stroke-width", "8px");
