@@ -163,6 +163,14 @@ Legend
         .attr("height", 300)
         .attr("width", 200)
         .attr("fill", "rgb(218,220,217)");
+    svg.append("text")
+        .text("Legend")
+        .attr("class", "label")
+        .attr("x", 1450)
+        .attr("y", 520)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
     
 });
 
