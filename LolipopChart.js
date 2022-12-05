@@ -353,27 +353,3 @@ Legend
             return num + " AD";
         }
     }
-
-    
-    // hover functions
-    //changes line thickness when you hover over a line
-    function hover_line(d){
-        console.log(d);
-        svg.selectAll("line")
-            .attr("stroke-width", "8px");
-    }
-    //changes line thickness back to default when you move off a line
-    function hover_line_out(d){
-        svg.selectAll("line")
-            .attr("stroke-width", "4px");
-    }
-    //changes circle radius when you hover over a circle
-    function circle_hover(d){
-        svg.selectAll("circle")
-            .attr("r", "10")
-    }
-    //changes circle radius back to default when you move off a circle
-    function circle_hover_out(d){
-        svg.selectAll("circle")
-            .attr("r", "6")
-    }
