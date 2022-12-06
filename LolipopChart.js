@@ -311,22 +311,22 @@ Legend
 
     // tooltip functions
     function tt_mouseover(d) {
-        tooltip.transition()		
-        .duration(200)	
-        .style("opacity", .9);		
+        tooltip.transition()
+        .duration(200)
+        .style("opacity", .9);
         tooltip.html(
             d.name +
             '<br>' +                          
-            'Start Date: '+ date_converter(d.found)+ '<br>'+
-            'End Date : ' +tt_dateender(d.end)+ '<br>'+
-            'Region Founded : '  + d.origin+ '<br>'+ 
-            'Religion Type : '  + d.type)        
+            'Start Date: ' + date_converter(d.found)+ '<br>'+
+            'End Date: ' + tt_dateender(d.end)+ '<br>'+
+            'Region Founded: ' + d.origin+ '<br>'+ 
+            'Religion Type: ' + d.type)
         .style("left", (event.pageX) + "px")
         .style("top", (event.pageY - 28) + "px");
     }
     function tt_mouseout(d) {
-        tooltip.transition()		
-        .duration(500)		
+        tooltip.transition()
+        .duration(500)
         .style("opacity", 0)
         //.style("left", (d3.event.pageX + 10) + "px")
         //.style("top", (d3.event.pageY - 28) + "px");
