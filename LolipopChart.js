@@ -220,21 +220,21 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
-//     nontheistic
-//     svg.append("rect")
-//         .attr("x", 1465)
-//         .attr("y", 590)
-//         .attr("height", 20)
-//         .attr("width", 20)
-//         .attr("fill", "#8a8a8a");
-//     svg.append("text")
-//         .text("Nontheistic")
-//         .attr("class", "label")
-//         .attr("x", 1500)
-//         .attr("y", 605)
-//         .attr("fill", "black")
-//         .style("text-anchor", "left")
-//         .attr("font-size", "17px");
+//  nontheistic
+//  svg.append("rect")
+//      .attr("x", 1465)
+//      .attr("y", 590)
+//      .attr("height", 20)
+//      .attr("width", 20)
+//      .attr("fill", "#8a8a8a");
+//  svg.append("text")
+//      .text("Nontheistic")
+//      .attr("class", "label")
+//      .attr("x", 1500)
+//      .attr("y", 605)
+//      .attr("fill", "black")
+//      .style("text-anchor", "left")
+//      .attr("font-size", "17px");
     // pantheism
     svg.append("rect")
         .attr("x", 1465)
