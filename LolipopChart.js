@@ -166,7 +166,7 @@ Legend
         .attr("y", 500)
         .attr("height", 300)
         .attr("width", 200)
-        .attr("fill", "rgb(218,220,217)");
+        .attr("fill", "#d4d7d9");
     svg.append("text")
         .text("Legend")
         .attr("class", "label")
@@ -220,21 +220,21 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
-    // nontheistic
-    svg.append("rect")
-        .attr("x", 1465)
-        .attr("y", 590)
-        .attr("height", 20)
-        .attr("width", 20)
-        .attr("fill", "#8a8a8a");
-    svg.append("text")
-        .text("Nontheistic")
-        .attr("class", "label")
-        .attr("x", 1500)
-        .attr("y", 605)
-        .attr("fill", "black")
-        .style("text-anchor", "left")
-        .attr("font-size", "17px");
+//     nontheistic
+//     svg.append("rect")
+//         .attr("x", 1465)
+//         .attr("y", 590)
+//         .attr("height", 20)
+//         .attr("width", 20)
+//         .attr("fill", "#8a8a8a");
+//     svg.append("text")
+//         .text("Nontheistic")
+//         .attr("class", "label")
+//         .attr("x", 1500)
+//         .attr("y", 605)
+//         .attr("fill", "black")
+//         .style("text-anchor", "left")
+//         .attr("font-size", "17px");
     // pantheism
     svg.append("rect")
         .attr("x", 1465)
@@ -327,7 +327,7 @@ Legend
     function tt_mouseout(d) {
         tooltip.transition()
         .duration(500)
-        .style("opacity", 0)
+        .style("opacity", 0);
         //.style("left", (d3.event.pageX + 10) + "px")
         //.style("top", (d3.event.pageY - 28) + "px");
     }
