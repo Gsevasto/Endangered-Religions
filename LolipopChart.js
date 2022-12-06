@@ -164,7 +164,7 @@ Legend
     svg.append("rect")
         .attr("x", 1450)
         .attr("y", 500)
-        .attr("height", 300)
+        .attr("height", 230)
         .attr("width", 200)
         .attr("fill", "#d4d7d9");
     svg.append("text")
@@ -193,7 +193,7 @@ Legend
     // dualism
     svg.append("rect")
         .attr("x", 1465)
-        .attr("y", 550)
+        .attr("y", 555)
         .attr("height", 20)
         .attr("width", 20)
         .attr("fill", "#7ea310");
@@ -201,14 +201,14 @@ Legend
         .text("Dualism")
         .attr("class", "label")
         .attr("x", 1500)
-        .attr("y", 565)
+        .attr("y", 570)
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
     // monotheism
     svg.append("rect")
         .attr("x", 1465)
-        .attr("y", 570)
+        .attr("y", 580)
         .attr("height", 20)
         .attr("width", 20)
         .attr("fill", "steelblue");
@@ -216,7 +216,7 @@ Legend
         .text("Monotheism")
         .attr("class", "label")
         .attr("x", 1500)
-        .attr("y", 585)
+        .attr("y", 595)
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
@@ -238,7 +238,7 @@ Legend
     // pantheism
     svg.append("rect")
         .attr("x", 1465)
-        .attr("y", 610)
+        .attr("y", 605)
         .attr("height", 20)
         .attr("width", 20)
         .attr("fill", "#e38931");
@@ -246,7 +246,7 @@ Legend
         .text("Pantheism")
         .attr("class", "label")
         .attr("x", 1500)
-        .attr("y", 625)
+        .attr("y", 620)
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
@@ -268,7 +268,7 @@ Legend
     // shamanism
     svg.append("rect")
         .attr("x", 1465)
-        .attr("y", 650)
+        .attr("y", 655)
         .attr("height", 20)
         .attr("width", 20)
         .attr("fill", "#8a8a8a");
@@ -276,11 +276,45 @@ Legend
         .text("Shamanism")
         .attr("class", "label")
         .attr("x", 1500)
-        .attr("y", 665)
+        .attr("y", 670)
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
-    
+    // timeline rect
+    svg.append("rect")
+        .attr("x", 1500)
+        .attr("y", 695)
+        .attr("height", 4)
+        .attr("width", 100)
+        .attr("fill", "black");
+    // timeline dots
+    svg.append("circle")
+        .attr("cx", 1500)
+        .attr("cy", 697)
+        .attr("r", 6)
+        .attr("fill", "black");
+    svg.append("circle")
+        .attr("cx", 1600)
+        .attr("cy", 697)
+        .attr("r", 6)
+        .attr("fill", "black");
+    // timeline labels
+    svg.append("text")
+        .text("Start Date")
+        .attr("class", "label")
+        .attr("x", 1465)
+        .attr("y", 720)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
+    svg.append("text")
+        .text("End Date")
+        .attr("class", "label")
+        .attr("x", 1565)
+        .attr("y", 720)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
     
 });
 
