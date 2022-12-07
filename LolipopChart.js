@@ -26,7 +26,6 @@ var tooltip = d3.select("body").append("div")
 //  INITIAL GRAPHIC    
 //=========================================================================================================================================//
 
-
 // variables for csv filenames
 var startName = "CulturesListV8.csv";
 var endName = "CulturesListV7EndOrder.csv";
@@ -423,11 +422,7 @@ function endFilter() {
 }
 function regionFilter() {
     update(regionName, "r");
-
 }
-
-
 function nameFilter() {
     update(nameName, "n");
 }
-
