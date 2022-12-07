@@ -26,6 +26,17 @@ div.tooltip {
   pointer-events: none;
 }
 
+.StartDot {
+    fill: green;
+}
+.EndDot {
+    fill: red;
+}
+.CurrentDot {
+    fill: blue;
+}
+
+
 .PolytheisticEnd {
     fill: #bd2b4b;
 }

@@ -30,10 +30,18 @@ var tooltip = d3.select("body").append("div")
 var startName = "CulturesListV8.csv";
 var endName = "CulturesListV7EndOrder.csv";
 var regionName = "CulturesListV7RegionOrder.csv";
-var nameName = "CulturesListV7NameOrder.csv"
+var nameName = "CulturesListV7NameOrder.csv";
+// state var for files
+var curFile = "CulturesListV8.csv";
+
+// filter types
+var defaultFilter = "d";
+var dateFilter = "dF";
+// state var for filter type
+var curFilter = defaultFilter;
 
 // updater functions
-// filterType values: s = start, e = end, r = region, n = name
+// filterType values: d = default, dF = date filter
 function update (filename, filterType) {
     
 svg.selectAll("*").remove();    
@@ -123,7 +131,7 @@ Hide tooltip on mouseout
     svg.selectAll("mycircle")
         .data(data)
         .join("circle")
-            .attr("class", function(d) { return d.type+"Found"; })
+            .attr("class", function(d) { if (filterType == dateFilter) {return "StartDot";} else {return d.type+"Found";} }) // 
             .attr("cx", function(d) { return x(d.found); })
             .attr("cy", function(d) { return y(d.name); })
             .attr("r", "6") // Controls Radius
@@ -148,7 +156,16 @@ Hide tooltip on mouseout
     svg.selectAll("mycircle")
         .data(data)
         .join("circle")
-            .attr("class", function(d) { return d.type+"End"; })
+            .attr("class", function(d) {
+                                        if (filterType == dateFilter) {
+                                            if (d.end == 2022) {
+                                                return "CurrentDot";
+                                            }
+                                            return "EndDot";
+                                        } else {
+                                            return d.type+"End";
+                                        }
+                                    })
             .attr("cx", function(d) { return x(d.end); })
             .attr("cy", function(d) { return y(d.name); })
             .attr("r", "6") // Controls Radius
@@ -333,7 +350,7 @@ Legend
 }
 
 // call update function for first time when page loaded
-update(startName, "s");
+update(curFile, curFilter);
 
 //=========================================================================================================================================//
 //  FUNCTIONS    
@@ -405,16 +422,30 @@ function tt_dateender(num) {
     }
 }
 
-// button functions
+// core button functions
 function startFilter() {
-    update(startName, "s");
+    curFile = startName;
+    update(curFile, curFilter);
 }
 function endFilter() {
-    update(endName, "e");
+    curFile = endName;
+    update(curFile, curFilter);
 }
 function regionFilter() {
-    update(regionName, "r");
+    curFile = regionName;
+    update(curFile, curFilter);
 }
 function nameFilter() {
-    update(nameName, "n");
+    curFile = nameName;
+    update(curFile, curFilter);
+}
+
+// aux button functions
+function defFilterSwitch() {
+    curFilter = defaultFilter;
+    update(curFile, curFilter);
+}
+function dateFilterSwitch() {
+    curFilter = dateFilter;
+    update(curFile, curFilter);
 }
