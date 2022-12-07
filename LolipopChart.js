@@ -387,3 +387,12 @@ Legend
             return num + " AD";
         }
     }
+    function found(){
+        console.log();
+    }
+    function ending(){
+        console.log();
+    }
+    function region(){
+        console.log();
+    }
