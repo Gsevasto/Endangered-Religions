@@ -28,7 +28,7 @@ var tooltip = d3.select("body").append("div")
 
 var foundName = "CulturesListV8.csv";
 var endName = "CulturesListV7EndOrder.csv";
-
+var regionName = "CulturesListV7RegionOrder.csv";
 
 // filterType values: f = found, e = end, r = region
 function update (filename, filterType) {
@@ -401,11 +401,11 @@ update(foundName, "f");
         }
     }
     function found(){
-        update(foundName);
+        update(foundName, "f");
     }
     function ending(){
-        update(endName);
+        update(endName, "e");
     }
     function region(){
-        console.log();
+        update(regionName, "r");
     }
