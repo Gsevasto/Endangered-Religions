@@ -72,7 +72,10 @@ d3.csv(filename, conversor).then( function(data) {
         .range([0, width-200])
     svg.append("g") // Appends a shape group to the pointed body
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x).tickFormat(""));
+        .call(d3.axisBottom(x).tickFormat(""))
+        .style("color", "white")
+        .transition()
+            .duration(200);
     
     // Define Y Axis
     var y = d3.scaleBand()
@@ -82,7 +85,8 @@ d3.csv(filename, conversor).then( function(data) {
     
     // Create group inside of SVG
     svg.append("g")
-        .call(d3.axisLeft(y));
+        .call(d3.axisLeft(y))
+        .style("color", "white");
     
     // add the X gridlines to graph
     svg.append("g")			
@@ -95,6 +99,7 @@ d3.csv(filename, conversor).then( function(data) {
                     return date_converter(d);
                 })
         )
+        .style("color", "white");
     
     // add the Y gridlines to graph
     svg.append("g")			
@@ -117,7 +122,7 @@ d3.csv(filename, conversor).then( function(data) {
             .attr("y2", function(d) { return y(d.name); })
             .attr("stroke", "steelblue")
             .attr("stroke-width", "4px") // Controls Width
-    /*------------------------------------------------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------------------------------------------------
 Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
         //.attr("d", data)
@@ -143,7 +148,7 @@ Hide tooltip on mouseout
             .attr("cy", function(d) { return y(d.name); })
             .attr("r", "6") // Controls Radius
             //.style("fill", "#69b3a2")
-        /*------------------------------------------------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------------------------------------------------
 Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
         //.attr("d", data)
@@ -177,7 +182,7 @@ Hide tooltip on mouseout
             .attr("cy", function(d) { return y(d.name); })
             .attr("r", "6") // Controls Radius
             //.style("fill", "#4C4082")
-        /*------------------------------------------------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------------------------------------------------
 Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
         //.attr("d", data)
@@ -202,14 +207,15 @@ Legend
         .attr("y", 500)
         .attr("height", 230)
         .attr("width", 200)
-        .attr("fill", "#f1dbbb");
+        .attr("fill", "#d4d4d4");
     svg.append("text")
         .text("Legend")
         .attr("class", "label")
         .attr("x", 1515)
         .attr("y", 520)
-        .attr("fill", "black")
+        .attr("fill", "#28282a")
         .style("text-anchor", "left")
+        .style("font-weight", "bold")
         .attr("font-size", "21px");
     // animism
     svg.append("rect")
