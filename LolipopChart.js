@@ -31,9 +31,10 @@ var tooltip = d3.select("body").append("div")
 var startName = "CulturesListV8.csv";
 var endName = "CulturesListV7EndOrder.csv";
 var regionName = "CulturesListV7RegionOrder.csv";
+var nameName = "CulturesListV7NameOrder.csv"
 
 // updater functions
-// filterType values: s = start, e = end, r = region
+// filterType values: s = start, e = end, r = region, n = name
 function update (filename, filterType) {
     
 svg.selectAll("*").remove();    
@@ -422,4 +423,11 @@ function endFilter() {
 }
 function regionFilter() {
     update(regionName, "r");
+
 }
+
+
+function nameFilter() {
+    update(nameName, "n");
+}
+
