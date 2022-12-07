@@ -26,8 +26,12 @@ var tooltip = d3.select("body").append("div")
 //  INITIAL GRAPHIC    
 //=========================================================================================================================================//
 
+var fn1 = "CulturesListV8.csv";
+
+function update (filename) {
+
 //Data is parsed and sent back as an data array
-d3.csv("CulturesListV8.csv", conversor).then( function(data) {
+d3.csv(filename, conversor).then( function(data) {
     
     // Log checking
     console.log(data); // Check data parsed correctly
@@ -99,7 +103,7 @@ Mouseover and mouseout events for tooltips
                         d3.select(this).attr("stroke-width", "8px");
                         //hover_line(d);
 			       })
-       .on("mouseout", function(d) {
+        .on("mouseout", function(d) {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Hide tooltip on mouseout
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -317,6 +321,10 @@ Legend
         .attr("font-size", "17px");
     
 });
+    
+}
+
+update(fn1);
 
 //=========================================================================================================================================//
 //  FUNCTIONS    
