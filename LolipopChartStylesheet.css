@@ -40,67 +40,67 @@ div.tooltip {
 
 
 .Central-Africa {
-    fill: #88F7E2;
+    stroke: #88F7E2;
     shape-rendering: crispEdges;
 }
 .North-Africa {
-    fill: #88F7E2;
+    stroke: #88F7E2;
     shape-rendering: crispEdges;
 }
 .West-Africa {
-    fill: #88F7E2;
+    stroke: #88F7E2;
     shape-rendering: crispEdges;
 }
 
 .Central-America {
-    fill: #44D492;
+    stroke: #44D492;
     shape-rendering: crispEdges;
 }
 .North-America {
-    fill: #44D492;
+    stroke: #44D492;
     shape-rendering: crispEdges;
 }
 .South-America {
-    fill: #44D492;
+    stroke: #44D492;
     shape-rendering: crispEdges;
 }
 
 .Central-Asia {
-    fill: #F5EB67;
+    stroke: #F5EB67;
     shape-rendering: crispEdges;
 }
 .East-Asia {
-    fill: #F5EB67;
+    stroke: #F5EB67;
     shape-rendering: crispEdges;
 }
 .South-Asia {
-    fill: #F5EB67;
+    stroke: #F5EB67;
     shape-rendering: crispEdges;
 }
 .West-Asia {
-    fill: #F5EB67;
+    stroke: #F5EB67;
     shape-rendering: crispEdges;
 }
 
 .East-Europe {
-    fill: #FFA15C;
+    stroke: #FFA15C;
     shape-rendering: crispEdges;
 }
 .North-Europe {
-    fill: #FFA15C;
+    stroke: #FFA15C;
     shape-rendering: crispEdges;
 }
 .South-Europe {
-    fill: #FFA15C;
+    stroke: #FFA15C;
     shape-rendering: crispEdges;
 }
 .West-Europe {
-    fill: #FFA15C;
+    stroke: #FFA15C;
     shape-rendering: crispEdges;
 }
 
 .Polynesia {
-    fill: #FA233E;
+    stroke: #FA233E;
     shape-rendering: crispEdges;
 }
 
