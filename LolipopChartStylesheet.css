@@ -1,13 +1,16 @@
 body {
-    background-color: #FCF5E5;
+    background-color: #28282a;
     padding-left: 1%;
     padding-top: 1%;
     padding-bottom: 2%;
+    color: white;
 }
+
 
 .grid line {
   stroke-opacity: 0.1;
   shape-rendering: crispEdges;
+  stroke: white;
 }
 
 .grid path {
@@ -21,21 +24,22 @@ div.tooltip {
   height: 80px;
   padding: 2px;
   font: 12px sans-serif;
-  background: lightsteelblue;
+  background: #d4d4d4;
   border: 0px;
   border-radius: 8px;
   pointer-events: none;
+color: black;
 }
 
 
 .StartDot {
-    fill: green;
+    fill: #0077b6;
 }
 .EndDot {
-    fill: red;
+    fill: #d1001f;
 }
 .CurrentDot {
-    fill: blue;
+    fill: #329542;
 }
 
 
@@ -104,7 +108,6 @@ div.tooltip {
     stroke: #FA233E;
     shape-rendering: crispEdges;
 }
-
 
 
 .PolytheisticEnd {
@@ -184,3 +187,4 @@ div.tooltip {
     stroke: #e38931;
     shape-rendering: crispEdges;
 }
+
