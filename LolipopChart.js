@@ -26,7 +26,7 @@ var tooltip = d3.select("body").append("div")
 //  INITIAL GRAPHIC    
 //=========================================================================================================================================//
 
-var foundName = "CulturesListV8.csv";
+var startName = "CulturesListV8.csv";
 var endName = "CulturesListV7EndOrder.csv";
 var regionName = "CulturesListV7RegionOrder.csv";
 
@@ -329,7 +329,7 @@ Legend
     
 }
 
-update(foundName, "f");
+update(startName, "f");
 
 //=========================================================================================================================================//
 //  FUNCTIONS    
@@ -400,10 +400,10 @@ update(foundName, "f");
             return num + " AD";
         }
     }
-    function found(){
-        update(foundName, "f");
+    function start(){
+        update(startName, "f");
     }
-    function ending(){
+    function end(){
         update(endName, "e");
     }
     function region(){
