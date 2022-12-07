@@ -33,7 +33,7 @@ var endName = "CulturesListV7EndOrder.csv";
 var regionName = "CulturesListV7RegionOrder.csv";
 
 // updater functions
-// filterType values: f = found, e = end, r = region
+// filterType values: s = start, e = end, r = region
 function update (filename, filterType) {
     
 svg.selectAll("*").remove();    
@@ -332,12 +332,8 @@ Legend
     
 }
 
-
-
-
 // call update function for first time when page loaded
-update(startName, "f");
-
+update(startName, "s");
 
 //=========================================================================================================================================//
 //  FUNCTIONS    
@@ -402,7 +398,7 @@ function date_converter(num) {
     }
     function end(){
         update(endName, "e");
-
+    }
 }
 function tt_dateender(num) {
     if (num < 0) {
@@ -418,13 +414,12 @@ function tt_dateender(num) {
 }
 
 // button functions
-function start(){
-    update(startName, "f");
+function startFilter() {
+    update(startName, "s");
 }
-function end(){
+function endFilter() {
     update(endName, "e");
 }
-function region(){
+function regionFilter() {
     update(regionName, "r");
-}
 }
