@@ -2,7 +2,7 @@
 //  INITIALIZATION OF GRAPH    
 //=========================================================================================================================================//
 
-// Source Code Refrenced from: https://d3-graph-gallery.com/graph/lollipop_cleveland.html
+// Source Code Referenced from: https://d3-graph-gallery.com/graph/lollipop_cleveland.html
 // Selects the created SVG and sets width and height
 var margin = {left: 100, right: 80, top: 50, bottom: 50 }, 
     width = 1800 - margin.left -margin.right,
