@@ -110,7 +110,7 @@ d3.csv(filename, conversor).then( function(data) {
     svg.selectAll("myline")
         .data(data)
         .join("line")
-            .attr("class", function(d) { if (lineFilter == defaultLineFilter) {return d.type+"Line";} else {return d.region;} })
+            .attr("class", function(d) { if (lineFilter == defaultLineFilter) {return d.type+"Line";} else {return d.origin;} })
             .attr("x1", function(d) { return x(d.found); })
             .attr("x2", function(d) { return x(d.end); })
             .attr("y1", function(d) { return y(d.name); })
