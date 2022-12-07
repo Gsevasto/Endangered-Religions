@@ -28,9 +28,9 @@ var tooltip = d3.select("body").append("div")
 
 // variables for csv filenames
 var startName = "CulturesListV8.csv";
-var endName = "CulturesListV7EndOrder.csv";
-var regionName = "CulturesListV7RegionOrder.csv";
-var nameName = "CulturesListV7NameOrder.csv";
+var endName = "CulturesListV8EndOrder.csv";
+var regionName = "CulturesListV8RegionOrder.csv";
+var nameName = "CulturesListV8NameOrder.csv";
 // state var for files
 var curFile = "CulturesListV8.csv";
 
