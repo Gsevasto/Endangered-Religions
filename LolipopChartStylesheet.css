@@ -39,67 +39,67 @@ div.tooltip {
 
 
 
-Central-Africa {
+.Central-Africa {
     fill: #88F7E2;
     shape-rendering: crispEdges;
 }
-North-Africa {
+.North-Africa {
     fill: #88F7E2;
     shape-rendering: crispEdges;
 }
-West-Africa {
+.West-Africa {
     fill: #88F7E2;
     shape-rendering: crispEdges;
 }
 
-Central-America {
+.Central-America {
     fill: #44D492;
     shape-rendering: crispEdges;
 }
-North-America {
+.North-America {
     fill: #44D492;
     shape-rendering: crispEdges;
 }
-South-America {
+.South-America {
     fill: #44D492;
     shape-rendering: crispEdges;
 }
 
-Central-Asia {
+.Central-Asia {
     fill: #F5EB67;
     shape-rendering: crispEdges;
 }
-East-Asia {
+.East-Asia {
     fill: #F5EB67;
     shape-rendering: crispEdges;
 }
-South-Asia {
+.South-Asia {
     fill: #F5EB67;
     shape-rendering: crispEdges;
 }
-West-Asia {
+.West-Asia {
     fill: #F5EB67;
     shape-rendering: crispEdges;
 }
 
-East-Europe {
+.East-Europe {
     fill: #FFA15C;
     shape-rendering: crispEdges;
 }
-North-Europe {
+.North-Europe {
     fill: #FFA15C;
     shape-rendering: crispEdges;
 }
-South-Europe {
+.South-Europe {
     fill: #FFA15C;
     shape-rendering: crispEdges;
 }
-West-Europe {
+.West-Europe {
     fill: #FFA15C;
     shape-rendering: crispEdges;
 }
 
-Polynesia {
+.Polynesia {
     fill: #FA233E;
     shape-rendering: crispEdges;
 }

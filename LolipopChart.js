@@ -35,15 +35,21 @@ var religionName = "CulturesListV9ReligionOrder.csv";
 // state var for files
 var curFile = startName;
 
-// filter types
-var defaultFilter = "d";
-var dateFilter = "dF";
-// state var for filter type
-var curFilter = defaultFilter;
+// dot filter types
+var defaultDotFilter = "d";
+var dateDotFilter = "dF";
+// state var for dot filter type
+var curDotFilter = defaultDotFilter;
+
+// line filter types
+var defaultLineFilter = "l";
+var regionLineFilter = "rf";
+// state var for line filter
+var curLineFilter = defaultLineFilter;
 
 // updater functions
 // filterType values: d = default, dF = date filter
-function update (filename, filterType) {
+function update (filename, dotFilterType, lineFilter) {
     
 svg.selectAll("*").remove();    
 
@@ -104,7 +110,7 @@ d3.csv(filename, conversor).then( function(data) {
     svg.selectAll("myline")
         .data(data)
         .join("line")
-            .attr("class", function(d) { return d.type+"Line"; })
+            .attr("class", function(d) { if (lineFilter == defaultLineFilter) {return d.type+"Line";} else {return d.origin;} })
             .attr("x1", function(d) { return x(d.found); })
             .attr("x2", function(d) { return x(d.end); })
             .attr("y1", function(d) { return y(d.name); })
@@ -132,7 +138,7 @@ Hide tooltip on mouseout
     svg.selectAll("mycircle")
         .data(data)
         .join("circle")
-            .attr("class", function(d) { if (filterType == dateFilter) {return "StartDot";} else {return d.type+"Found";} }) // 
+            .attr("class", function(d) { if (dotFilterType == dateDotFilter) {return "StartDot";} else {return d.type+"Found";} }) // 
             .attr("cx", function(d) { return x(d.found); })
             .attr("cy", function(d) { return y(d.name); })
             .attr("r", "6") // Controls Radius
@@ -158,7 +164,7 @@ Hide tooltip on mouseout
         .data(data)
         .join("circle")
             .attr("class", function(d) {
-                                        if (filterType == dateFilter) {
+                                        if (dotFilterType == dateDotFilter) {
                                             if (d.end == 2022) {
                                                 return "CurrentDot";
                                             }
@@ -336,7 +342,7 @@ Legend
 }
 
 // call update function for first time when page loaded
-update(curFile, curFilter);
+update(curFile, curDotFilter, curLineFilter);
 
 //=========================================================================================================================================//
 //  FUNCTIONS    
@@ -411,31 +417,39 @@ function tt_dateender(num) {
 // core button functions
 function startFilter() {
     curFile = startName;
-    update(curFile, curFilter);
+    update(curFile, curDotFilter, curLineFilter);
 }
 function endFilter() {
     curFile = endName;
-    update(curFile, curFilter);
+    update(curFile, curDotFilter, curLineFilter);
 }
 function regionFilter() {
     curFile = regionName;
-    update(curFile, curFilter);
+    update(curFile, curDotFilter, curLineFilter);
 }
 function nameFilter() {
     curFile = nameName;
-    update(curFile, curFilter);
+    update(curFile, curDotFilter, curLineFilter);
 }
 function religionFilter() {
     curFile = religionName;
-    update(curFile, curFilter);
+    update(curFile, curDotFilter, curLineFilter);
 }
 
 // aux button functions
 function defFilterSwitch() {
-    curFilter = defaultFilter;
-    update(curFile, curFilter);
+    curDotFilter = defaultDotFilter;
+    update(curFile, curDotFilter, curLineFilter);
 }
 function dateFilterSwitch() {
-    curFilter = dateFilter;
-    update(curFile, curFilter);
+    curDotFilter = dateDotFilter;
+    update(curFile, curDotFilter, curLineFilter);
+}
+function defLineSwitch() {
+    curLineFilter = defaultLineFilter;
+    update(curFile, curDotFilter, curLineFilter);
+}
+function regionLineSwitch() {
+    curLineFilter = regionLineFilter;
+    update(curFile, curDotFilter, curLineFilter);
 }
