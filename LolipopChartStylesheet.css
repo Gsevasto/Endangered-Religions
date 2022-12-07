@@ -36,6 +36,51 @@ div.tooltip {
     fill: blue;
 }
 
+Central-Africa {
+    shape-rendering: crispEdges;
+}
+Central-America {
+    shape-rendering: crispEdges;
+}
+Central-Asia {
+    shape-rendering: crispEdges;
+}
+East-Asia {
+    shape-rendering: crispEdges;
+}
+East-Europe {
+    shape-rendering: crispEdges;
+}
+North-Africa {
+    shape-rendering: crispEdges;
+}
+North-America {
+    shape-rendering: crispEdges;
+}
+North-Europe {
+    shape-rendering: crispEdges;
+}
+Polynesia {
+    shape-rendering: crispEdges;
+}
+South-America {
+    shape-rendering: crispEdges;
+}
+South-Asia {
+    shape-rendering: crispEdges;
+}
+South-Europe {
+    shape-rendering: crispEdges;
+}
+West-Africa {
+    shape-rendering: crispEdges;
+}
+West-Asia {
+    shape-rendering: crispEdges;
+}
+West-Europe {
+    shape-rendering: crispEdges;
+}
 
 .PolytheisticEnd {
     fill: #bd2b4b;
