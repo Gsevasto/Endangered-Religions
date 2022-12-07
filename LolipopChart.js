@@ -26,9 +26,14 @@ var tooltip = d3.select("body").append("div")
 //  INITIAL GRAPHIC    
 //=========================================================================================================================================//
 
-var fn1 = "CulturesListV8.csv";
+var foundName = "CulturesListV8.csv";
+var endName = "CulturesListV7EndOrder.csv";
 
-function update (filename) {
+
+// filterType values: f = found, e = end, r = region
+function update (filename, filterType) {
+    
+svg.selectAll("*").remove();    
 
 //Data is parsed and sent back as an data array
 d3.csv(filename, conversor).then( function(data) {
@@ -324,7 +329,7 @@ Legend
     
 }
 
-update(fn1);
+update(foundName, "f");
 
 //=========================================================================================================================================//
 //  FUNCTIONS    
@@ -396,10 +401,10 @@ update(fn1);
         }
     }
     function found(){
-        console.log();
+        update(foundName);
     }
     function ending(){
-        console.log();
+        update(endName);
     }
     function region(){
         console.log();
