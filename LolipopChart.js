@@ -202,7 +202,7 @@ Legend
         .attr("y", 500)
         .attr("height", 230)
         .attr("width", 200)
-        .attr("fill", "#d4d7d9");
+        .attr("fill", "#f1dbbb");
     svg.append("text")
         .text("Legend")
         .attr("class", "label")
