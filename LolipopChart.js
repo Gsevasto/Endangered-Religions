@@ -26,10 +26,13 @@ var tooltip = d3.select("body").append("div")
 //  INITIAL GRAPHIC    
 //=========================================================================================================================================//
 
+
+// variables for csv filenames
 var startName = "CulturesListV8.csv";
 var endName = "CulturesListV7EndOrder.csv";
 var regionName = "CulturesListV7RegionOrder.csv";
 
+// updater functions
 // filterType values: f = found, e = end, r = region
 function update (filename, filterType) {
     
@@ -329,83 +332,98 @@ Legend
     
 }
 
+
+
+
+// call update function for first time when page loaded
 update(startName, "f");
+
 
 //=========================================================================================================================================//
 //  FUNCTIONS    
 //=========================================================================================================================================//
 
-    //Data parsing and conversion
-    function conversor(d){
-        d.name = d.name;
-        d.found = +d.found;
-        d.origin = d.origin;
-        d.end = +d.end;
-        d.type = d.type;
-        return d;
-    }
+//Data parsing and conversion
+function conversor(d){
+    d.name = d.name;
+    d.found = +d.found;
+    d.origin = d.origin;
+    d.end = +d.end;
+    d.type = d.type;
+    return d;
+}
 
 
-    // gridlines in x axis function
-    function make_x_gridlines(x) {		
-        return d3.axisBottom(x);
+// gridlines in x axis function
+function make_x_gridlines(x) {		
+    return d3.axisBottom(x);
+}
+
+// gridlines in x axis function
+function make_y_gridlines(y) {		
+    return d3.axisLeft(y);
+}
+
+// tooltip functions
+function tt_mouseover(d) {
+    tooltip.transition()
+    .duration(200)
+    .style("opacity", .9);
+    tooltip.html(
+        d.name +
+        '<br>' +                          
+        'Start Date: ' + date_converter(d.found)+ '<br>'+
+        'End Date: ' + tt_dateender(d.end)+ '<br>'+
+        'Region Founded: ' + d.origin+ '<br>'+ 
+        'Religion Type: ' + d.type)
+    .style("left", (event.pageX) + "px")
+    .style("top", (event.pageY - 28) + "px");
+}
+function tt_mouseout(d) {
+    tooltip.transition()
+    .duration(500)
+    .style("opacity", 0);
+    //.style("left", (d3.event.pageX + 10) + "px")
+    //.style("top", (d3.event.pageY - 28) + "px");
+}
+
+// date conversion function
+function date_converter(num) {
+    if (num < 0) {
+        return (0 - num) + " BC";
+    } else if (num == 0) {
+        return 0;
+    } else {
+        return num + " AD";
     }
 
-    // gridlines in x axis function
-    function make_y_gridlines(y) {		
-        return d3.axisLeft(y);
-    }
-
-    // tooltip functions
-    function tt_mouseover(d) {
-        tooltip.transition()
-        .duration(200)
-        .style("opacity", .9);
-        tooltip.html(
-            d.name +
-            '<br>' +                          
-            'Start Date: ' + date_converter(d.found)+ '<br>'+
-            'End Date: ' + tt_dateender(d.end)+ '<br>'+
-            'Region Founded: ' + d.origin+ '<br>'+ 
-            'Religion Type: ' + d.type)
-        .style("left", (event.pageX) + "px")
-        .style("top", (event.pageY - 28) + "px");
-    }
-    function tt_mouseout(d) {
-        tooltip.transition()
-        .duration(500)
-        .style("opacity", 0);
-        //.style("left", (d3.event.pageX + 10) + "px")
-        //.style("top", (d3.event.pageY - 28) + "px");
-    }
-
-    // date conversion function
-    function date_converter(num) {
-        if (num < 0) {
-            return (0 - num) + " BC";
-        } else if (num == 0) {
-            return 0;
-        } else {
-            return num + " AD";
-        }
-    }
-    function tt_dateender(num) {
-        if (num < 0) {
-            return (0 - num) + " BC";
-        } else if (num == 0) {
-            return 0;
-        } else if (num == 2022) {
-            return "Currently Practiced"
-        } else {
-            return num + " AD";
-        }
-    }
     function start(){
         update(startName, "f");
     }
     function end(){
         update(endName, "e");
+
+}
+function tt_dateender(num) {
+    if (num < 0) {
+        return (0 - num) + " BC";
+    } else if (num == 0) {
+        return 0;
+    } else if (num == 2022) {
+        return "Currently Practiced"
+    } else {
+        return num + " AD";
+
     }
-    function region(){
-        update(regionName, "r");
-    }
+}
+
+// button functions
+function start(){
+    update(startName, "f");
+}
+function end(){
+    update(endName, "e");
+}
+function region(){
+    update(regionName, "r");
+}
