@@ -27,13 +27,13 @@ var tooltip = d3.select("body").append("div")
 //=========================================================================================================================================//
 
 // variables for csv filenames
-var startName = "CulturesListV8.csv";
-var endName = "CulturesListV8EndOrder.csv";
-var regionName = "CulturesListV8RegionOrder.csv";
-var nameName = "CulturesListV8NameOrder.csv";
-var religionName = "CulturesListV8ReligionOrder.csv";
+var startName = "CulturesListV9.csv";
+var endName = "CulturesListV9EndOrder.csv";
+var regionName = "CulturesListV9RegionOrder.csv";
+var nameName = "CulturesListV9NameOrder.csv";
+var religionName = "CulturesListV9ReligionOrder.csv";
 // state var for files
-var curFile = "CulturesListV8.csv";
+var curFile = startName;
 
 // filter types
 var defaultFilter = "d";
