@@ -114,16 +114,3 @@ div.tooltip {
     stroke: #8a8a8a;
     shape-rendering: crispEdges;
 }
-
-.PantheismEnd {
-    fill: #fd5602;
-}
-
-.PantheismFound {
-    fill: #ffaf42;
-}
-
-.PantheismLine {
-    stroke: #e38931;
-    shape-rendering: crispEdges;
-}
