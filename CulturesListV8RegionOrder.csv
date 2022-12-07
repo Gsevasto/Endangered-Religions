@@ -1,74 +1,74 @@
 name,found,origin,end,type
-Bantu,940,Central Africa,1500,Dualistic
-Aztec,1300,Central-America,1521,Polytheistic
+Bantu,940,Central Africa,1500,Monotheistic
 Mayan,250,Central-America,900,Nontheistic
+Aztec,1300,Central-America,1521,Polytheistic
 Olmec,1270,Central-America,2022,Monotheistic
 Tengrism,-400,Central-Asia,1400,Animism
-Confucianism,-600,East-Asia,2022,Nontheistic
-Muism,-1000,East-Asia,2022,Polytheistic
-Shenism,1054,East-Asia,2022,Monotheistic
-Shinto,-600,East-Asia,2022,Animism
-Taoism,-500,East-Asia,1980,Polytheistic
 Wuism,-1046,East-Asia,1900,Shamanistic
+Taoism,-500,East-Asia,1980,Polytheistic
+Muism,-1000,East-Asia,2022,Polytheistic
+Shinto,-600,East-Asia,2022,Animism
+Confucianism,-600,East-Asia,2022,Nontheistic
+Shenism,1054,East-Asia,2022,Monotheistic
 Rodnover,1800,East-Europe,2022,Polytheistic
 Berber,-2000,North-Africa,800,Monotheistic
-Anasazi,200,North-America,1300,Polytheistic
 Hopewell,200,North-America,500,Polytheistic
-Inuit,1000,North-America,1900,Animism
-Theosophy,656,North-America,2022,Monotheistic
+Anasazi,200,North-America,1300,Polytheistic
+Inuit,1050,North-America,1900,Animism
+Theosophy,1875,North-America,2022,Nontheistic
 Asatru,400,North-Europe,1000,Polytheistic
 Germanic Paganism,-500,North-Europe,1300,Polytheistic
 Sami,100,North-Europe,1700,Animism
-Hawaiian,500,Polynesia,1900,Polytheistic
 Polynesian,-2000,Polynesia,1900,Polytheistic
+Hawaiian,500,Polynesia,1900,Polytheistic
 Incan,1200,South-America,1530,Polytheistic
 Tewahedo,400,South-America,1905,Monotheistic
-Baha'i,1000,South-Asia,2022,Shamanistic
-Bon,-100,South-Asia,750,Polytheistic
-Buddhism,-550,South-Asia,2022,Polytheistic
-Gnosticism,100,South-Asia,300,Polytheistic
-Hinduism,-2000,South-Asia,2022,Polytheistic
 Indus,-3300,South-Asia,-1300,Animism
-Jainism,-3000,South-Asia,2022,Shamanistic
-Mahayana,-100,South-Asia,2022,Polytheistic
+Gnosticism,100,South-Asia,300,Polytheistic
 Manichaeism,210,South-Asia,382,Dualistic
-Sikhism,1500,South-Asia,2022,Monotheistic
-Theravada,-400,South-Asia,2022,Polytheistic
-Vajrayana,650,South-Asia,1100,Polytheistic
 Vedic,-1500,South-Asia,600,Polytheistic
-Vedism,1200,South-Asia,2022,Dualistic
-Basque,1809,South-Europe,2022,Polytheistic
-Bogomilism,620,South-Europe,2022,Monotheistic
-East Orthodox,200,South-Europe,2022,Monotheistic
+Bon,-100,South-Asia,750,Polytheistic
+Vajrayana,650,South-Asia,1100,Polytheistic
+Jainism,-3000,South-Asia,2022,Shamanistic
+Jainism,-3000,South-Asia,2022,Shamanistic
+Hinduism,-2000,South-Asia,2022,Polytheistic
+Buddhism,-550,South-Asia,2022,Polytheistic
+Theravada,-400,South-Asia,2022,Polytheistic
+Mahayana,-100,South-Asia,2022,Polytheistic
+Baha'i,1000,South-Asia,2022,Shamanistic
+Sikhism,1500,South-Asia,2022,Monotheistic
+Vedism,1500,South-Asia,2022,Polytheistic
+Baha'i,1844,South-Asia,2022,Monotheistic
+Minoan,-3500,South-Europe,-1100,Monotheistic
 Hellenism,-300,South-Europe,-140,Animism
-Hermeticism,850,South-Europe,2022,Monotheistic
-Hittite,1517,South-Europe,2022,Monotheistic
-Minoan,1100,South-Europe,1530,Polytheistic
-Mithraism,-600,South-Europe,400,Monotheistic
-Neo-Platonism,800,South-Europe,2022,Monotheistic
-Neoplatonism,1500,South-Europe,2022,Monotheistic
-Orphism,1346,South-Europe,1400,Monotheistic
 Roman Paganism,-650,South-Europe,313,Nontheistic
+Mithraism,-600,South-Europe,400,Monotheistic
+Orphism,1346,South-Europe,1400,Monotheistic
+Hermeticism,100,South-Europe,1460,Dualistic
+Bogomilism,1000,South-Europe,1500,Dualistic
+Neo-Platonism,250,South-Europe,1716,Monotheistic
+East Orthodox,200,South-Europe,2022,Monotheistic
+Neoplatonism,1500,South-Europe,2022,Monotheistic
+Hittite,1517,South-Europe,2022,Monotheistic
+Basque,1809,South-Europe,2022,Polytheistic
 Yoruba,-300,West-Africa,1420,Polytheistic
-Ancient Egyptian,-3100,West-Asia,-332,Polytheistic
-Ashurism,1200,West-Asia,1512,Pantheism
-Atenism,1054,West-Asia,2022,Monotheistic
+Atenism,-1349,West-Asia,-1324,Monotheistic
 Canaanite,-2300,West-Asia,-1250,Polytheistic
-Catholocism,30,West-Asia,2022,Monotheistic
-Christianity,30,West-Asia,2022,Monotheistic
-Judaism,-100,West-Asia,2022,Monotheistic
-Kemetism Orthodox,1988,West-Asia,2022,Polytheistic
+Ashurism,-2047,West-Asia,-612,Polytheistic
 Mesopotamian,-3100,West-Asia,-539,Polytheistic
-Nilotic,960,West-Asia,1279,Polytheistic
+Ancient Egyptian,-3100,West-Asia,-332,Polytheistic
 Phoenician,-1500,West-Asia,-300,Polytheistic
-Shi'te,630,West-Asia,2022,Monotheistic
+Zoroastrianism,-600,West-Asia,650,Monotheistic
 Sufism,1200,West-Asia,1826,Monotheistic
+Judaism,-100,West-Asia,2022,Monotheistic
+Christianity,30,West-Asia,2022,Monotheistic
+Catholocism,30,West-Asia,2022,Monotheistic
+Shi'te,630,West-Asia,2022,Monotheistic
 Sunni,630,West-Asia,2022,Monotheistic
-Zoroastrianism,-600,West-Asia,650,Monotheistic
-Zoroastrianism,-600,West-Asia,650,Monotheistic
-Catharism,325,West-Europe,1244,Dualistic
+Kemetism Orthodox,1988,West-Asia,2022,Polytheistic
 Celtic,-1200,West-Europe,-400,Polytheistic
+Catharism,325,West-Europe,1244,Dualistic
+Romuva,-3000,West-Europe,1400,Polytheistic
 Kabbalah,-40,West-Europe,1573,Monotheistic
 Protestantism,1500,West-Europe,1900,Monotheistic
 Reform Judaism,1700,West-Europe,2022,Monotheistic
-Romuva,-3000,West-Europe,1400,Polytheistic

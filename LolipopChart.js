@@ -31,6 +31,7 @@ var startName = "CulturesListV8.csv";
 var endName = "CulturesListV8EndOrder.csv";
 var regionName = "CulturesListV8RegionOrder.csv";
 var nameName = "CulturesListV8NameOrder.csv";
+var religionName = "CulturesListV8ReligionOrder.csv";
 // state var for files
 var curFile = "CulturesListV8.csv";
 
@@ -422,6 +423,10 @@ function regionFilter() {
 }
 function nameFilter() {
     curFile = nameName;
+    update(curFile, curFilter);
+}
+function religionFilter() {
+    curFile = religionName;
     update(curFile, curFilter);
 }
 
