@@ -26,6 +26,7 @@ div.tooltip {
   pointer-events: none;
 }
 
+
 .StartDot {
     fill: green;
 }
@@ -36,51 +37,74 @@ div.tooltip {
     fill: blue;
 }
 
+
+
 Central-Africa {
-    shape-rendering: crispEdges;
-}
-Central-America {
-    shape-rendering: crispEdges;
-}
-Central-Asia {
-    shape-rendering: crispEdges;
-}
-East-Asia {
-    shape-rendering: crispEdges;
-}
-East-Europe {
+    fill: #88F7E2;
     shape-rendering: crispEdges;
 }
 North-Africa {
-    shape-rendering: crispEdges;
-}
-North-America {
-    shape-rendering: crispEdges;
-}
-North-Europe {
-    shape-rendering: crispEdges;
-}
-Polynesia {
-    shape-rendering: crispEdges;
-}
-South-America {
-    shape-rendering: crispEdges;
-}
-South-Asia {
-    shape-rendering: crispEdges;
-}
-South-Europe {
+    fill: #88F7E2;
     shape-rendering: crispEdges;
 }
 West-Africa {
+    fill: #88F7E2;
+    shape-rendering: crispEdges;
+}
+
+Central-America {
+    fill: #44D492;
+    shape-rendering: crispEdges;
+}
+North-America {
+    fill: #44D492;
+    shape-rendering: crispEdges;
+}
+South-America {
+    fill: #44D492;
+    shape-rendering: crispEdges;
+}
+
+Central-Asia {
+    fill: #F5EB67;
+    shape-rendering: crispEdges;
+}
+East-Asia {
+    fill: #F5EB67;
+    shape-rendering: crispEdges;
+}
+South-Asia {
+    fill: #F5EB67;
     shape-rendering: crispEdges;
 }
 West-Asia {
+    fill: #F5EB67;
+    shape-rendering: crispEdges;
+}
+
+East-Europe {
+    fill: #FFA15C;
+    shape-rendering: crispEdges;
+}
+North-Europe {
+    fill: #FFA15C;
+    shape-rendering: crispEdges;
+}
+South-Europe {
+    fill: #FFA15C;
     shape-rendering: crispEdges;
 }
 West-Europe {
+    fill: #FFA15C;
     shape-rendering: crispEdges;
 }
+
+Polynesia {
+    fill: #FA233E;
+    shape-rendering: crispEdges;
+}
+
+
 
 .PolytheisticEnd {
     fill: #bd2b4b;
