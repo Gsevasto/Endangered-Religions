@@ -255,7 +255,7 @@ Legend
         .attr("y", 605)
         .attr("height", 20)
         .attr("width", 20)
-        .attr("fill", "#e38931");
+        .attr("fill", "#8a8a8a");
     svg.append("text")
         .text("Nontheistic")
         .attr("class", "label")
@@ -285,7 +285,7 @@ Legend
         .attr("y", 655)
         .attr("height", 20)
         .attr("width", 20)
-        .attr("fill", "#8a8a8a");
+        .attr("fill", "#e38931");
     svg.append("text")
         .text("Shamanism")
         .attr("class", "label")

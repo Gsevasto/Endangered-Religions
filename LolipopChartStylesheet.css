@@ -103,14 +103,14 @@ div.tooltip {
 }
 
 .ShamanisticEnd {
-    fill: #535c5f;
+    fill: #fd5602;
 }
 
 .ShamanisticFound {
-    fill: #73939c;
+    fill: #ffaf42;
 }
 
 .ShamanisticLine {
-    stroke: #8a8a8a;
+    stroke: #e38931;
     shape-rendering: crispEdges;
 }
