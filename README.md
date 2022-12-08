@@ -1,14 +1,14 @@
+# Project: Endangered and Extinct Religions
+
 ### UCSC
 
 ### CSE 163 - Fall 2022
 
-#### Supervisor: Suresh Lodha
-
 #### Members: Greg Sevaston, Andre Dion, Samik Pradhan, Sree Chinta
 
-# Project: Endangered and Extinct Religions
+#### Supervisor: Suresh Lodha
 
-==========
-Link to Visualization:
+
+### Link to Visualization:
 
 https://gsevasto.github.io/Endangered-Religions/
