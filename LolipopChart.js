@@ -204,8 +204,8 @@ Legend
     // legend box
     svg.append("rect")
         .attr("x", 1450)
-        .attr("y", 500)
-        .attr("height", 230)
+        .attr("y", 100)
+        .attr("height", 630)
         .attr("width", 200)
         .attr("fill", "#d4d4d4");
     svg.append("text")
