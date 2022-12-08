@@ -623,6 +623,7 @@ function endFilter() {
 }
 function regionFilter() {
     curFile = regionName;
+    curLineFilter = regionLineFilter;
     update(curFile, curDotFilter, curLineFilter);
 }
 function nameFilter() {
@@ -631,6 +632,7 @@ function nameFilter() {
 }
 function religionFilter() {
     curFile = religionName;
+    curLineFilter = defaultLineFilter;
     update(curFile, curDotFilter, curLineFilter);
 }
 
