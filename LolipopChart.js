@@ -211,12 +211,12 @@ Legend
     svg.append("text")
         .text("Legend")
         .attr("class", "label")
-        .attr("x", 1515)
+        .attr("x", 1505)
         .attr("y", 120)
         .attr("fill", "#28282a")
         .style("text-anchor", "left")
         .style("font-weight", "bold")
-        .attr("font-size", "21px");
+        .attr("font-size", "25px");
     // animism
     svg.append("rect")
         .attr("x", 1465)
