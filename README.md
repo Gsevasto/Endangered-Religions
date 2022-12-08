@@ -7,6 +7,6 @@
 #### Supervisor: Suresh Lodha
 
 
-### Link to Visualization:
+## Link to Visualization:
 
 https://gsevasto.github.io/Endangered-Religions/
