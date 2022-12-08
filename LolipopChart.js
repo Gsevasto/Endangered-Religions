@@ -217,6 +217,17 @@ Legend
         .style("text-anchor", "left")
         .style("font-weight", "bold")
         .attr("font-size", "25px");
+    
+    // religion section divider
+    svg.append("text")
+        .text("Religion Types")
+        .attr("class", "label")
+        .attr("x", 1480)
+        .attr("y", 148)
+        .attr("fill", "#28282a")
+        .style("text-anchor", "left")
+        .style("font-weight", "bold")
+        .attr("font-size", "20px");
     // animism
     svg.append("rect")
         .attr("x", 1465)
@@ -232,16 +243,6 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
-    // religion section divider
-    svg.append("text")
-        .text("Religion Types")
-        .attr("class", "label")
-        .attr("x", 1480)
-        .attr("y", 148)
-        .attr("fill", "#28282a")
-        .style("text-anchor", "left")
-        .style("font-weight", "bold")
-        .attr("font-size", "20px");
     // dualism
     svg.append("rect")
         .attr("x", 1465)
@@ -317,22 +318,119 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
+    
+    // region section divider
+    svg.append("text")
+        .text("Regions")
+        .attr("class", "label")
+        .attr("x", 1507)
+        .attr("y", 330)
+        .attr("fill", "#28282a")
+        .style("text-anchor", "left")
+        .style("font-weight", "bold")
+        .attr("font-size", "20px");
+    // Africa
+    svg.append("rect")
+        .attr("x", 1465)
+        .attr("y", 340)
+        .attr("height", 20)
+        .attr("width", 20)
+        .attr("fill", "#809bce");
+    svg.append("text")
+        .text("Africa")
+        .attr("class", "label")
+        .attr("x", 1500)
+        .attr("y", 355)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
+    // Americas
+    svg.append("rect")
+        .attr("x", 1465)
+        .attr("y", 365)
+        .attr("height", 20)
+        .attr("width", 20)
+        .attr("fill", "#44D492");
+    svg.append("text")
+        .text("Americas")
+        .attr("class", "label")
+        .attr("x", 1500)
+        .attr("y", 380)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
+    // Asia
+    svg.append("rect")
+        .attr("x", 1465)
+        .attr("y", 390)
+        .attr("height", 20)
+        .attr("width", 20)
+        .attr("fill", "#ac6f82");
+    svg.append("text")
+        .text("Asia")
+        .attr("class", "label")
+        .attr("x", 1500)
+        .attr("y", 405)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
+    // Europe
+    svg.append("rect")
+        .attr("x", 1465)
+        .attr("y", 415)
+        .attr("height", 20)
+        .attr("width", 20)
+        .attr("fill", "#FFA15C");
+    svg.append("text")
+        .text("Europe")
+        .attr("class", "label")
+        .attr("x", 1500)
+        .attr("y", 430)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
+    // Polynesia
+    svg.append("rect")
+        .attr("x", 1465)
+        .attr("y", 440)
+        .attr("height", 20)
+        .attr("width", 20)
+        .attr("fill", "#FA233E");
+    svg.append("text")
+        .text("Polynesia")
+        .attr("class", "label")
+        .attr("x", 1500)
+        .attr("y", 455)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
+    
+    // timeline section divider
+    svg.append("text")
+        .text("Timeline")
+        .attr("class", "label")
+        .attr("x", 1505)
+        .attr("y", 485)
+        .attr("fill", "#28282a")
+        .style("text-anchor", "left")
+        .style("font-weight", "bold")
+        .attr("font-size", "20px");
     // timeline rect
     svg.append("rect")
         .attr("x", 1500)
-        .attr("y", 495)
+        .attr("y", 500)
         .attr("height", 4)
         .attr("width", 100)
         .attr("fill", "black");
     // timeline dots
     svg.append("circle")
         .attr("cx", 1500)
-        .attr("cy", 497)
+        .attr("cy", 502)
         .attr("r", 6)
         .attr("fill", "black");
     svg.append("circle")
         .attr("cx", 1600)
-        .attr("cy", 497)
+        .attr("cy", 502)
         .attr("r", 6)
         .attr("fill", "black");
     // timeline labels
@@ -340,7 +438,7 @@ Legend
         .text("Start Date")
         .attr("class", "label")
         .attr("x", 1465)
-        .attr("y", 520)
+        .attr("y", 525)
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
@@ -348,7 +446,60 @@ Legend
         .text("End Date")
         .attr("class", "label")
         .attr("x", 1565)
-        .attr("y", 520)
+        .attr("y", 525)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
+    
+    // date section divider
+    svg.append("text")
+        .text("Date Dots")
+        .attr("class", "label")
+        .attr("x", 1500)
+        .attr("y", 555)
+        .attr("fill", "#28282a")
+        .style("text-anchor", "left")
+        .style("font-weight", "bold")
+        .attr("font-size", "20px");
+    // start date
+    svg.append("circle")
+        .attr("cx", 1475)
+        .attr("cy", 577)
+        .attr("r", 6)
+        .attr("fill", "#0077b6");
+    svg.append("text")
+        .text("Start Date")
+        .attr("class", "label")
+        .attr("x", 1495)
+        .attr("y", 582)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
+    // end date
+    svg.append("circle")
+        .attr("cx", 1475)
+        .attr("cy", 602)
+        .attr("r", 6)
+        .attr("fill", "#d1001f");
+    svg.append("text")
+        .text("End Date")
+        .attr("class", "label")
+        .attr("x", 1495)
+        .attr("y", 607)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "17px");
+    // currently practiced
+    svg.append("circle")
+        .attr("cx", 1475)
+        .attr("cy", 627)
+        .attr("r", 6)
+        .attr("fill", "#329542");
+    svg.append("text")
+        .text("Currently Practiced")
+        .attr("class", "label")
+        .attr("x", 1495)
+        .attr("y", 632)
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
