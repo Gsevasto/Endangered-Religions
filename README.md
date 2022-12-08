@@ -1,8 +1,6 @@
 # Project: Endangered and Extinct Religions
 
-### UCSC
-
-### CSE 163 - Fall 2022
+### UCSC - CSE 163 - Fall 2022
 
 #### Members: Greg Sevaston, Andre Dion, Samik Pradhan, Sree Chinta
 
