@@ -53,18 +53,11 @@ function update (filename, dotFilterType, lineFilter) {
     
 svg.selectAll("*").remove();    
 
-//Data is parsed and sent back as an data array
+// Data is parsed and sent back as an data array
 d3.csv(filename, conversor).then( function(data) {
     
     // Log checking
     console.log(data); // Check data parsed correctly
-    
-   /* var scatterdataset= 
-                data.map(function (d) {
-                    return { name:d.name, found: d.found, origin: d.origin, end: d.end, type:d.type};
-                });*/
-
-    //data=scatterdataset;
     
     // Define X axis
     var x  = d3.scaleLinear()
@@ -125,11 +118,11 @@ d3.csv(filename, conversor).then( function(data) {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
-        //.attr("d", data)
+        
         .on("mouseover", function(event, d){
                         tt_mouseover(d);
                         d3.select(this).attr("stroke-width", "8px");
-                        //hover_line(d);
+                        
 			       })
         .on("mouseout", function(d) {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -147,11 +140,9 @@ Hide tooltip on mouseout
             .attr("cx", function(d) { return x(d.found); })
             .attr("cy", function(d) { return y(d.name); })
             .attr("r", "6") // Controls Radius
-            //.style("fill", "#69b3a2")
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
-        //.attr("d", data)
         .on("mouseover", function(event, d){
                         tt_mouseover(d);
                         d3.select(this).attr("r", "10");
@@ -181,11 +172,9 @@ Hide tooltip on mouseout
             .attr("cx", function(d) { return x(d.end); })
             .attr("cy", function(d) { return y(d.name); })
             .attr("r", "6") // Controls Radius
-            //.style("fill", "#4C4082")
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
 Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
-        //.attr("d", data)
         .on("mouseover", function(event, d){
                         tt_mouseover(d); 
                         d3.select(this).attr("r", "10");
@@ -555,8 +544,7 @@ function tt_mouseout(d) {
     tooltip.transition()
     .duration(500)
     .style("opacity", 0);
-    //.style("left", (d3.event.pageX + 10) + "px")
-    //.style("top", (d3.event.pageY - 28) + "px");
+
 }
 
 // date conversion function
