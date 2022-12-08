@@ -220,7 +220,7 @@ Legend
     // animism
     svg.append("rect")
         .attr("x", 1465)
-        .attr("y", 130)
+        .attr("y", 160)
         .attr("height", 20)
         .attr("width", 20)
         .attr("fill", "#9c3587");
@@ -228,14 +228,14 @@ Legend
         .text("Animism")
         .attr("class", "label")
         .attr("x", 1500)
-        .attr("y", 145)
+        .attr("y", 175)
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
     // dualism
     svg.append("rect")
         .attr("x", 1465)
-        .attr("y", 155)
+        .attr("y", 185)
         .attr("height", 20)
         .attr("width", 20)
         .attr("fill", "#7ea310");
@@ -243,14 +243,14 @@ Legend
         .text("Dualism")
         .attr("class", "label")
         .attr("x", 1500)
-        .attr("y", 170)
+        .attr("y", 200)
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
     // monotheism
     svg.append("rect")
         .attr("x", 1465)
-        .attr("y", 180)
+        .attr("y", 210)
         .attr("height", 20)
         .attr("width", 20)
         .attr("fill", "steelblue");
@@ -258,14 +258,14 @@ Legend
         .text("Monotheism")
         .attr("class", "label")
         .attr("x", 1500)
-        .attr("y", 195)
+        .attr("y", 225)
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
     // nontheistic
     svg.append("rect")
         .attr("x", 1465)
-        .attr("y", 205)
+        .attr("y", 235)
         .attr("height", 20)
         .attr("width", 20)
         .attr("fill", "#8a8a8a");
@@ -273,14 +273,14 @@ Legend
         .text("Nontheistic")
         .attr("class", "label")
         .attr("x", 1500)
-        .attr("y", 220)
+        .attr("y", 250)
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
     // polytheism
     svg.append("rect")
         .attr("x", 1465)
-        .attr("y", 230)
+        .attr("y", 260)
         .attr("height", 20)
         .attr("width", 20)
         .attr("fill", "#e3534c");
@@ -288,14 +288,14 @@ Legend
         .text("Polytheism")
         .attr("class", "label")
         .attr("x", 1500)
-        .attr("y", 245)
+        .attr("y", 275)
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
     // shamanism
     svg.append("rect")
         .attr("x", 1465)
-        .attr("y", 255)
+        .attr("y", 285)
         .attr("height", 20)
         .attr("width", 20)
         .attr("fill", "#e38931");
@@ -303,26 +303,26 @@ Legend
         .text("Shamanism")
         .attr("class", "label")
         .attr("x", 1500)
-        .attr("y", 270)
+        .attr("y", 300)
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
     // timeline rect
     svg.append("rect")
         .attr("x", 1500)
-        .attr("y", 295)
+        .attr("y", 495)
         .attr("height", 4)
         .attr("width", 100)
         .attr("fill", "black");
     // timeline dots
     svg.append("circle")
         .attr("cx", 1500)
-        .attr("cy", 297)
+        .attr("cy", 497)
         .attr("r", 6)
         .attr("fill", "black");
     svg.append("circle")
         .attr("cx", 1600)
-        .attr("cy", 297)
+        .attr("cy", 497)
         .attr("r", 6)
         .attr("fill", "black");
     // timeline labels
@@ -330,7 +330,7 @@ Legend
         .text("Start Date")
         .attr("class", "label")
         .attr("x", 1465)
-        .attr("y", 320)
+        .attr("y", 520)
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
@@ -338,7 +338,7 @@ Legend
         .text("End Date")
         .attr("class", "label")
         .attr("x", 1565)
-        .attr("y", 320)
+        .attr("y", 520)
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
