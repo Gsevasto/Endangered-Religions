@@ -493,6 +493,32 @@ Legend
         .style("text-anchor", "left")
         .attr("font-size", "17px");
     
+    // extra dot info
+    svg.append("text")
+        .text("* dot colors by religion type")
+        .attr("class", "label")
+        .attr("x", 1457)
+        .attr("y", 670)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "14px");
+    svg.append("text")
+        .text("are similar to the line colors")
+        .attr("class", "label")
+        .attr("x", 1466)
+        .attr("y", 685)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "13px");
+    svg.append("text")
+        .text("by religion type listed above")
+        .attr("class", "label")
+        .attr("x", 1466)
+        .attr("y", 700)
+        .attr("fill", "black")
+        .style("text-anchor", "left")
+        .attr("font-size", "13px");
+    
 });
     
 }
