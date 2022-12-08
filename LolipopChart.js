@@ -204,7 +204,7 @@ Legend
     // legend box
     svg.append("rect")
         .attr("x", 1450)
-        .attr("y", 100)
+        .attr("y", 95)
         .attr("height", 630)
         .attr("width", 200)
         .attr("fill", "#d4d4d4");
@@ -212,7 +212,7 @@ Legend
         .text("Legend")
         .attr("class", "label")
         .attr("x", 1515)
-        .attr("y", 520)
+        .attr("y", 120)
         .attr("fill", "#28282a")
         .style("text-anchor", "left")
         .style("font-weight", "bold")
