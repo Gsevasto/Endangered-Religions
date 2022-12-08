@@ -1,5 +1,5 @@
 //=========================================================================================================================================//
-//  INITIALIZATION OF GRAPH    
+// INITIALIZATION OF GRAPH    
 //=========================================================================================================================================//
 
 // Source Code Referenced from: https://d3-graph-gallery.com/graph/lollipop_cleveland.html
@@ -16,14 +16,14 @@ var svg = d3.select("body") // NOTE: SVG is storing the pointer data to the sele
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-//Create the tooltip
+// Create the tooltip
 var tooltip = d3.select("body").append("div")
 .attr("class", "tooltip")
 .style("opacity", 0)
 .classed("hidden", true);
 
 //=========================================================================================================================================//
-//  INITIAL GRAPHIC    
+// INITIAL GRAPHIC    
 //=========================================================================================================================================//
 
 // variables for csv filenames
@@ -116,7 +116,7 @@ d3.csv(filename, conversor).then( function(data) {
             .attr("stroke", "steelblue")
             .attr("stroke-width", "4px") // Controls Width
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
-Mouseover and mouseout events for tooltips
+ Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
         
         .on("mouseover", function(event, d){
@@ -126,7 +126,7 @@ Mouseover and mouseout events for tooltips
 			       })
         .on("mouseout", function(d) {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
-Hide tooltip on mouseout
+ Hide tooltip on mouseout
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
                         tt_mouseout(d);
                         d3.select(this).attr("stroke-width", "4px");
@@ -141,7 +141,7 @@ Hide tooltip on mouseout
             .attr("cy", function(d) { return y(d.name); })
             .attr("r", "6") // Controls Radius
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
-Mouseover and mouseout events for tooltips
+ Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
         .on("mouseover", function(event, d){
                         tt_mouseover(d);
@@ -149,7 +149,7 @@ Mouseover and mouseout events for tooltips
 			       })
        .on("mouseout", function(d) {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
-Hide tooltip on mouseout
+ Hide tooltip on mouseout
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
                         tt_mouseout(d);
                         d3.select(this).attr("r", "6");
@@ -173,7 +173,7 @@ Hide tooltip on mouseout
             .attr("cy", function(d) { return y(d.name); })
             .attr("r", "6") // Controls Radius
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
-Mouseover and mouseout events for tooltips
+ Mouseover and mouseout events for tooltips
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
         .on("mouseover", function(event, d){
                         tt_mouseover(d); 
@@ -181,14 +181,14 @@ Mouseover and mouseout events for tooltips
 			       })
        .on("mouseout", function(d) {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
-Hide tooltip on mouseout
+ Hide tooltip on mouseout
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
                         tt_mouseout(d);
                         d3.select(this).attr("r", "6");
 			       })
     
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
-Legend
+ Legend
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
     // legend box
     svg.append("rect")
@@ -217,7 +217,8 @@ Legend
         .style("text-anchor", "left")
         .style("font-weight", "bold")
         .attr("font-size", "20px");
-    // animism
+    
+    // Animism
     svg.append("rect")
         .attr("x", 1465)
         .attr("y", 160)
@@ -232,7 +233,8 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
-    // dualism
+    
+    // Dualism
     svg.append("rect")
         .attr("x", 1465)
         .attr("y", 185)
@@ -247,7 +249,8 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
-    // monotheism
+    
+    // Monotheism
     svg.append("rect")
         .attr("x", 1465)
         .attr("y", 210)
@@ -262,7 +265,8 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
-    // nontheistic
+    
+    // Nontheistic
     svg.append("rect")
         .attr("x", 1465)
         .attr("y", 235)
@@ -277,7 +281,8 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
-    // polytheism
+    
+    // Polytheism
     svg.append("rect")
         .attr("x", 1465)
         .attr("y", 260)
@@ -292,7 +297,8 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
-    // shamanism
+    
+    // Shamanism
     svg.append("rect")
         .attr("x", 1465)
         .attr("y", 285)
@@ -318,6 +324,7 @@ Legend
         .style("text-anchor", "left")
         .style("font-weight", "bold")
         .attr("font-size", "20px");
+    
     // Africa
     svg.append("rect")
         .attr("x", 1465)
@@ -333,6 +340,7 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
+    
     // Americas
     svg.append("rect")
         .attr("x", 1465)
@@ -348,6 +356,7 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
+    
     // Asia
     svg.append("rect")
         .attr("x", 1465)
@@ -363,6 +372,7 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
+    
     // Europe
     svg.append("rect")
         .attr("x", 1465)
@@ -378,6 +388,7 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
+    
     // Polynesia
     svg.append("rect")
         .attr("x", 1465)
@@ -404,6 +415,7 @@ Legend
         .style("text-anchor", "left")
         .style("font-weight", "bold")
         .attr("font-size", "20px");
+    
     // timeline rect
     svg.append("rect")
         .attr("x", 1500)
@@ -411,6 +423,7 @@ Legend
         .attr("height", 4)
         .attr("width", 100)
         .attr("fill", "black");
+    
     // timeline dots
     svg.append("circle")
         .attr("cx", 1500)
@@ -422,6 +435,7 @@ Legend
         .attr("cy", 502)
         .attr("r", 6)
         .attr("fill", "black");
+    
     // timeline labels
     svg.append("text")
         .text("Start Date")
@@ -450,6 +464,7 @@ Legend
         .style("text-anchor", "left")
         .style("font-weight", "bold")
         .attr("font-size", "20px");
+    
     // start date
     svg.append("circle")
         .attr("cx", 1475)
@@ -464,6 +479,7 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
+    
     // end date
     svg.append("circle")
         .attr("cx", 1475)
@@ -478,6 +494,7 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
+    
     // currently practiced
     svg.append("circle")
         .attr("cx", 1475)
@@ -527,7 +544,7 @@ Legend
 update(curFile, curDotFilter, curLineFilter);
 
 //=========================================================================================================================================//
-//  FUNCTIONS    
+// FUNCTIONS    
 //=========================================================================================================================================//
 
 //Data parsing and conversion
