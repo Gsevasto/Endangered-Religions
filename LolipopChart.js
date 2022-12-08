@@ -232,6 +232,16 @@ Legend
         .attr("fill", "black")
         .style("text-anchor", "left")
         .attr("font-size", "17px");
+    // religion section divider
+    svg.append("text")
+        .text("Religion Types")
+        .attr("class", "label")
+        .attr("x", 1480)
+        .attr("y", 148)
+        .attr("fill", "#28282a")
+        .style("text-anchor", "left")
+        .style("font-weight", "bold")
+        .attr("font-size", "20px");
     // dualism
     svg.append("rect")
         .attr("x", 1465)
